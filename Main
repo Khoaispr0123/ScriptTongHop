@@ -1,0 +1,257 @@
+repeat task.wait(0.25) until game:IsLoaded();
+getgenv().Image = "rbxassetid://131399280547985"; -- put a asset id in here to make it work
+getgenv().ToggleUI = "LeftControl" -- This where you can Toggle the Fluent ui library
+
+task.spawn(function()
+    if not getgenv().LoadedMobileUI == true then getgenv().LoadedMobileUI = true
+        local OpenUI = Instance.new("ScreenGui");
+        local ImageButton = Instance.new("ImageButton");
+        local UICorner = Instance.new("UICorner");
+        OpenUI.Name = "OpenUI";
+        OpenUI.Parent = game:GetService("CoreGui");
+        OpenUI.ZIndexBehavior = Enum.ZIndexBehavior.Sibling;
+        ImageButton.Parent = OpenUI;
+        ImageButton.BackgroundColor3 = Color3.fromRGB(105,105,105);
+        ImageButton.BackgroundTransparency = 0.8
+        ImageButton.Position = UDim2.new(0.9,0,0.1,0);
+        ImageButton.Size = UDim2.new(0,50,0,50);
+        ImageButton.Image = getgenv().Image;
+        ImageButton.Draggable = true;
+        ImageButton.Transparency = 1;
+        UICorner.CornerRadius = UDim.new(0,200);
+        UICorner.Parent = ImageButton;
+        ImageButton.MouseButton1Click:Connect(function()
+            game:GetService("VirtualInputManager"):SendKeyEvent(true,getgenv().ToggleUI,false,game);
+        end)
+    end
+end)
+
+local version = "[TESTING]"
+
+local Fluent = loadstring(game:HttpGet("https://github.com/dawid-scripts/Fluent/releases/latest/download/main.lua"))()
+local SaveManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/dawid-scripts/Fluent/master/Addons/SaveManager.lua"))()
+local InterfaceManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/dawid-scripts/Fluent/master/Addons/InterfaceManager.lua"))()
+
+local Window = Fluent:CreateWindow({
+    Title = "Script tổng hợp 🐧" .. version,
+    SubTitle = "by @kyaanguyen",
+    TabWidth = 160,
+    Size = UDim2.fromOffset(580, 460),
+    Acrylic = true, -- The blur may be detectable, setting this to false disables blur entirely
+    Theme = "Dark",
+    MinimizeKey = Enum.KeyCode.LeftControl -- Used when theres no MinimizeKeybind
+})
+
+--Fluent provides Lucide Icons https://lucide.dev/icons/ for the tabs, icons are optional
+local Tabs = {
+    About = Window:AddTab({ Title = "About", Icon = "" }),
+    AllMap = Window:AddTab({ Title = "All Map", Icon = "" }),
+    BloxFruits = Window:AddTab({ Title = "Blox Fruits", Icon = "apple" }),
+    Doors = Window:AddTab({ Title = "Doors", Icon = "" }),
+    -- Settings
+    Settings = Window:AddTab({ Title = "Settings", Icon = "settings" })
+}
+
+local Options = Fluent.Options
+
+do
+    Fluent:Notify({
+        Title = "Notification",
+        Content = "Like And Sub (@kyaanguyen)",
+        SubContent = "SubContent", -- Optional
+        Duration = 5 -- Set to nil to make the notification not disappear
+    })
+    
+    Tabs.About:AddParagraph({
+        Title = "Credits",
+        Content = "ABC.\nSecond line!"
+    })
+    
+    Tabs.AllMap:AddButton({
+        Title = "Infinite Yield",
+        Description = "Ngoll",
+        Callback = function()
+            Window:Dialog({
+                Title = "Warning",
+                Content = "Are you sure you want to load this script?",
+                Buttons = {
+                    {
+                        Title = "Confirm",
+                        Callback = function()
+                            loadstring(game:HttpGet("https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source"))()
+                            print("Loading Infinite Yield")
+                        end
+                    },
+                    {
+                        Title = "Cancel",
+                        Callback = function()
+                            print("Cancelled")
+                        end
+                    }
+                }
+            })
+        end
+    })
+    
+    Tabs.Doors:AddParagraph({
+        Title = "Warning",
+        Content = "⛔️ This game is currently not supported. ⛔️"
+    })
+    
+    Tabs.BloxFruits:AddButton({
+        Title = "W-Azure",
+        Description = "No Key",
+        Callback = function()
+            Window:Dialog({
+                Title = "Warning",
+                Content = "Are you sure you want to load this script?",
+                Buttons = {
+                    {
+                        Title = "Confirm",
+                        Callback = function()
+                            loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/3b2169cf53bc6104dabe8e19562e5cc2.lua"))()
+                            Fluent:Notify({
+                                Title = "Script Tổng Hợp",
+                                Content = "Loading W-azure...",
+                                Duration = 8
+                            })
+                        end
+                    },
+                    {
+                        Title = "Cancel",
+                        Callback = function()
+                            print("Cancelled")
+                        end
+                    }
+                }
+            })
+        end
+    })
+    
+    Tabs.BloxFruits:AddButton({
+        Title = "Redz",
+        Description = "Only works in Blox Fruits",
+        Callback = function()
+            Window:Dialog({
+                Title = "Warning",
+                Content = "Are you sure you want to load this script?",
+                Buttons = {
+                    {
+                        Title = "Confirm",
+                        Callback = function()
+                            loadstring(game:HttpGet("https://raw.githubusercontent.com/REDzHUB/BloxFruits/main/redz9999"))()
+                            Fluent:Notify({
+                                Title = "Script Tổng Hợp",
+                                Content = "Loading Redz Hub...",
+                                Duration = 8
+                            })
+                        end
+                    },
+                    {
+                        Title = "Cancel",
+                        Callback = function()
+                            print("Cancelled")
+                        end
+                    }
+                }
+            })
+        end
+    })
+    
+    Tabs.BloxFruits:AddButton({
+        Title = "Alchemy Hub",
+        Description = "Only works in Blox Fruits",
+        Callback = function()
+            Window:Dialog({
+                Title = "Warning",
+                Content = "Are you sure you want to load this script?",
+                Buttons = {
+                    {
+                        Title = "Confirm",
+                        Callback = function()
+                            loadstring(game:HttpGet("https://scripts.alchemyhub.xyz"))()
+                            Fluent:Notify({
+                                Title = "Script Tổng Hợp",
+                                Content = "Loading Alchemy Hub...",
+                                Duration = 8
+                            })
+                        end
+                    },
+                    {
+                        Title = "Cancel",
+                        Callback = function()
+                            print("Cancelled")
+                        end
+                    }
+                }
+            })
+        end
+    })
+    
+    Tabs.BloxFruits:AddButton({
+        Title = "Doraemon Hub (Master Hub)",
+        Description = "Tỷ lệ RESET ACCOUNT cao (KHÔNG KHUYẾN KHÍCH)",
+        Callback = function()
+            Window:Dialog({
+                Title = "Warning",
+                Content = "Are you sure you want to load this script?",
+                Buttons = {
+                    {
+                        Title = "Confirm",
+                        Callback = function()
+                            loadstring(game:HttpGet('https://raw.githubusercontent.com/onepicesenpai/onepicesenpai/main/onichanokaka'))()
+                            Fluent:Notify({
+                                Title = "Script Tổng Hợp",
+                                Content = "Loading Master Hub...",
+                                Duration = 8
+                            })
+                        end
+                    },
+                    {
+                        Title = "Cancel",
+                        Callback = function()
+                            print("Cancelled")
+                        end
+                    }
+                }
+            })
+        end
+    })
+end
+
+-- Addons:
+-- SaveManager (Allows you to have a configuration system)
+-- InterfaceManager (Allows you to have a interface managment system)
+
+-- Hand the library over to our managers
+SaveManager:SetLibrary(Fluent)
+InterfaceManager:SetLibrary(Fluent)
+
+-- Ignore keys that are used by ThemeManager.
+-- (we dont want configs to save themes, do we?)
+SaveManager:IgnoreThemeSettings()
+
+-- You can add indexes of elements the save manager should ignore
+SaveManager:SetIgnoreIndexes({})
+
+-- use case for doing it this way:
+-- a script hub could have themes in a global folder
+-- and game configs in a separate folder per game
+InterfaceManager:SetFolder("FluentScriptHub")
+SaveManager:SetFolder("FluentScriptHub/specific-game")
+
+InterfaceManager:BuildInterfaceSection(Tabs.Settings)
+SaveManager:BuildConfigSection(Tabs.Settings)
+
+
+Window:SelectTab(1)
+
+Fluent:Notify({
+    Title = "Fluent",
+    Content = "The script has been loaded.",
+    Duration = 8
+})
+
+-- You can use the SaveManager:LoadAutoloadConfig() to load a config
+-- which has been marked to be one that auto loads!
+SaveManager:LoadAutoloadConfig()
