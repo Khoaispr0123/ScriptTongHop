@@ -79,7 +79,11 @@ do
                         Title = "Confirm",
                         Callback = function()
                             loadstring(game:HttpGet("https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source"))()
-                            print("Loading Infinite Yield")
+                            Fluent:Notify({
+                                Title = "Script Tổng Hợp",
+                                Content = "Loading Infinite Yield...",
+                                Duration = 8
+                            })
                         end
                     },
                     {
@@ -126,10 +130,68 @@ do
                 }
             })
         end
+
+        Tabs.BloxFruits:AddButton({
+        Title = "Min Gaming V4",
+        Description = "No Key",
+        Callback = function()
+            Window:Dialog({
+                Title = "Warning",
+                Content = "Are you sure you want to load this script?",
+                Buttons = {
+                    {
+                        Title = "Confirm",
+                        Callback = function()
+                            loadstring(game:HttpGet("https://raw.githubusercontent.com/DarkMuscles/Games/Roblox/Bloxfruits/MinHubV4.lua"))()
+                            Fluent:Notify({
+                                Title = "Script Tổng Hợp",
+                                Content = "Loading Min Gaming V4...",
+                                Duration = 8
+                            })
+                        end
+                    },
+                    {
+                        Title = "Cancel",
+                        Callback = function()
+                            print("Cancelled")
+                        end
+                    }
+                }
+            })
+        end
+
+        Tabs.BloxFruits:AddButton({
+        Title = "Cokka Hub"
+        Description = "No Key",
+        Callback = function()
+            Window:Dialog({
+                Title = "Warning",
+                Content = "Are you sure you want to load this script?",
+                Buttons = {
+                    {
+                        Title = "Confirm",
+                        Callback = function()
+                            loadstring(game:HttpGet"https://raw.githubusercontent.com/UserDevEthical/Loadstring/main/CokkaHub.lua")()
+                            Fluent:Notify({
+                                Title = "Script Tổng Hợp",
+                                Content = "Loading Cokka Hub...",
+                                Duration = 8
+                            })
+                        end
+                    },
+                    {
+                        Title = "Cancel",
+                        Callback = function()
+                            print("Cancelled")
+                        end
+                    }
+                }
+            })
+        end
     })
     
     Tabs.BloxFruits:AddButton({
-        Title = "Redz",
+        Title = "Redz Hub",
         Description = "Only works in Blox Fruits",
         Callback = function()
             Window:Dialog({
@@ -139,7 +201,7 @@ do
                     {
                         Title = "Confirm",
                         Callback = function()
-                            loadstring(game:HttpGet("https://raw.githubusercontent.com/REDzHUB/BloxFruits/main/redz9999"))()
+                            loadstring(game:HttpGet("https://raw.githubusercontent.com/realredz/BloxFruits/refs/heads/main/Source.lua"))()
                             Fluent:Notify({
                                 Title = "Script Tổng Hợp",
                                 Content = "Loading Redz Hub...",
