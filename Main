@@ -1,5 +1,5 @@
 repeat task.wait(0.25) until game:IsLoaded();
-getgenv().Image = "rbxassetid://131399280547985"; -- put a asset id in here to make it work
+getgenv().Image = "rbxassetid://8104472021824927"; -- put a asset id in here to make it work
 getgenv().ToggleUI = "LeftControl" -- This where you can Toggle the Fluent ui library
 
 task.spawn(function()
@@ -11,9 +11,9 @@ task.spawn(function()
         OpenUI.Parent = game:GetService("CoreGui");
         OpenUI.ZIndexBehavior = Enum.ZIndexBehavior.Sibling;
         ImageButton.Parent = OpenUI;
-        ImageButton.BackgroundColor3 = Color3.fromRGB(105,105,105);
-        ImageButton.BackgroundTransparency = 0.8
-        ImageButton.Position = UDim2.new(0.9,0,0.1,0);
+        ImageButton.BackgroundColor3 = Color3.fromRGB(0, 0, 0);
+        ImageButton.BackgroundTransparency = 0
+        ImageButton.Position = UDim2.new(0.058, 0,0.321, 0);
         ImageButton.Size = UDim2.new(0,50,0,50);
         ImageButton.Image = getgenv().Image;
         ImageButton.Draggable = true;
@@ -26,7 +26,7 @@ task.spawn(function()
     end
 end)
 
-local version = "[TESTING]"
+local version = "1.0F"
 
 local Fluent = loadstring(game:HttpGet("https://github.com/dawid-scripts/Fluent/releases/latest/download/main.lua"))()
 local SaveManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/dawid-scripts/Fluent/master/Addons/SaveManager.lua"))()
@@ -45,9 +45,14 @@ local Window = Fluent:CreateWindow({
 --Fluent provides Lucide Icons https://lucide.dev/icons/ for the tabs, icons are optional
 local Tabs = {
     About = Window:AddTab({ Title = "About", Icon = "" }),
-    AllMap = Window:AddTab({ Title = "All Map", Icon = "" }),
+    AllMap = Window:AddTab({ Title = "All Map", Icon = "gallery-vertical-end" }),
     BloxFruits = Window:AddTab({ Title = "Blox Fruits", Icon = "apple" }),
-    Doors = Window:AddTab({ Title = "Doors", Icon = "" }),
+    BlueLockRivals = Window:AddTab({ Title = "Blue Lock Rivals", Icon = ""}),
+    Doors = Window:AddTab({ Title = "Doors", Icon = "door-open" }),
+    TheMimic = Window:AddTab({ Title = "The Mimic", Icon = "" }),
+    Evade = Window:AddTab({ Title = "Evade", Icon = "" }),
+    SquidGameX = Window:AddTab({ Title = "Squid Game X", Icon = "" }),
+    NaturalDisasterSurvival = Window:AddTab({ Title = "Natural Disaster Survival", Icon = "" }),
     -- Settings
     Settings = Window:AddTab({ Title = "Settings", Icon = "settings" })
 }
@@ -64,7 +69,7 @@ do
     
     Tabs.About:AddParagraph({
         Title = "Credits",
-        Content = "ABC.\nSecond line!"
+        Content = "@kyaahub"
     })
     
     Tabs.AllMap:AddButton({
@@ -115,7 +120,7 @@ do
                         Callback = function()
                             loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/3b2169cf53bc6104dabe8e19562e5cc2.lua"))()
                             Fluent:Notify({
-                                Title = "Script Tổng Hợp",
+                                Title = "Kyaa Hub",
                                 Content = "Loading W-azure...",
                                 Duration = 8
                             })
@@ -130,8 +135,9 @@ do
                 }
             })
         end
-
-        Tabs.BloxFruits:AddButton({
+    })
+    
+    Tabs.BloxFruits:AddButton({
         Title = "Min Gaming V4",
         Description = "No Key",
         Callback = function()
@@ -144,37 +150,8 @@ do
                         Callback = function()
                             loadstring(game:HttpGet("https://raw.githubusercontent.com/DarkMuscles/Games/Roblox/Bloxfruits/MinHubV4.lua"))()
                             Fluent:Notify({
-                                Title = "Script Tổng Hợp",
+                                Title = "Kyaa Hub",
                                 Content = "Loading Min Gaming V4...",
-                                Duration = 8
-                            })
-                        end
-                    },
-                    {
-                        Title = "Cancel",
-                        Callback = function()
-                            print("Cancelled")
-                        end
-                    }
-                }
-            })
-        end
-
-        Tabs.BloxFruits:AddButton({
-        Title = "Cokka Hub"
-        Description = "No Key",
-        Callback = function()
-            Window:Dialog({
-                Title = "Warning",
-                Content = "Are you sure you want to load this script?",
-                Buttons = {
-                    {
-                        Title = "Confirm",
-                        Callback = function()
-                            loadstring(game:HttpGet"https://raw.githubusercontent.com/UserDevEthical/Loadstring/main/CokkaHub.lua")()
-                            Fluent:Notify({
-                                Title = "Script Tổng Hợp",
-                                Content = "Loading Cokka Hub...",
                                 Duration = 8
                             })
                         end
@@ -192,7 +169,7 @@ do
     
     Tabs.BloxFruits:AddButton({
         Title = "Redz Hub",
-        Description = "Only works in Blox Fruits",
+        Description = "No key",
         Callback = function()
             Window:Dialog({
                 Title = "Warning",
@@ -203,8 +180,102 @@ do
                         Callback = function()
                             loadstring(game:HttpGet("https://raw.githubusercontent.com/realredz/BloxFruits/refs/heads/main/Source.lua"))()
                             Fluent:Notify({
-                                Title = "Script Tổng Hợp",
+                                Title = "Kyaa Hub",
                                 Content = "Loading Redz Hub...",
+                                Duration = 8
+                            })
+                        end
+                    },
+                    {
+                        Title = "Cancel",
+                        Callback = function()
+                            print("Cancelled")
+                        end
+                    }
+                }
+            })
+        end
+    })
+
+    Tabs.BloxFruits:AddButton({
+        Title = "Speed Hub X",
+        Description = "No key",
+        Callback = function()
+            Window:Dialog({
+                Title = "Warning",
+                Content = "Are you sure you want to load this script?",
+                Buttons = {
+                    {
+                        Title = "Confirm",
+                        Callback = function()
+                            loadstring(game:HttpGet("https://raw.githubusercontent.com/AhmadV99/Speed-Hub-X/main/Speed%20Hub%20X.lua", true))()
+                            Fluent:Notify({
+                                Title = "Kyaa Hub",
+                                Content = "Loading Speed Hub X...",
+                                Duration = 8
+                            })
+                        end
+                    },
+                    {
+                        Title = "Cancel",
+                        Callback = function()
+                            print("Cancelled")
+                        end
+                    }
+                }
+            })
+        end
+    })
+
+    Tabs.BloxFruits:AddButton({
+        Title = "Cut Tay Hub",
+        Description = "No key (LẤY MŨ, UP TỘC V3,4, GẠT CẦN)",
+        Callback = function()
+            Window:Dialog({
+                Title = "Warning",
+                Content = "Are you sure you want to load this script?",
+                Buttons = {
+                    {
+                        Title = "Confirm",
+                        Callback = function()
+                            loadstring(game:HttpGet('https://raw.githubusercontent.com/diemquy/CutTayHub/main/Cuttayhubreal.lua'))()
+                            Fluent:Notify({
+                                Title = "Kyaa Hub",
+                                Content = "Loading Speed Hub X...",
+                                Duration = 8
+                            })
+                        end
+                    },
+                    {
+                        Title = "Cancel",
+                        Callback = function()
+                            print("Cancelled")
+                        end
+                    }
+                }
+            })
+        end
+    })
+
+    Tabs.BloxFruits:AddButton({
+        Title = "Xero Hub",
+        Description = "No key (săn leviathan, sea)",
+        Callback = function()
+            Window:Dialog({
+                Title = "Warning",
+                Content = "Are you sure you want to load this script?",
+                Buttons = {
+                    {
+                        Title = "Confirm",
+                        Callback = function()
+                            getgenv().Team = "Marines"
+
+                            getgenv().Hide_Menu = false
+                            
+                            loadstring(game:HttpGet("https://apixerohub.x10.mx/main.lua"))()
+                            Fluent:Notify({
+                                Title = "Kyaa Hub",
+                                Content = "Loading Speed Hub X...",
                                 Duration = 8
                             })
                         end
@@ -222,7 +293,7 @@ do
     
     Tabs.BloxFruits:AddButton({
         Title = "Alchemy Hub",
-        Description = "Only works in Blox Fruits",
+        Description = "Need Key",
         Callback = function()
             Window:Dialog({
                 Title = "Warning",
@@ -233,7 +304,7 @@ do
                         Callback = function()
                             loadstring(game:HttpGet("https://scripts.alchemyhub.xyz"))()
                             Fluent:Notify({
-                                Title = "Script Tổng Hợp",
+                                Title = "Kyaa Hub",
                                 Content = "Loading Alchemy Hub...",
                                 Duration = 8
                             })
@@ -263,8 +334,188 @@ do
                         Callback = function()
                             loadstring(game:HttpGet('https://raw.githubusercontent.com/onepicesenpai/onepicesenpai/main/onichanokaka'))()
                             Fluent:Notify({
-                                Title = "Script Tổng Hợp",
+                                Title = "Kyaa Hub",
                                 Content = "Loading Master Hub...",
+                                Duration = 8
+                            })
+                        end
+                    },
+                    {
+                        Title = "Cancel",
+                        Callback = function()
+                            print("Cancelled")
+                        end
+                    }
+                }
+            })
+        end
+    })
+
+    Tabs.BlueLockRivals:AddButton({
+        Title = "Arbix Hub",
+        Description = "No key? IDK",
+        Callback = function()
+            Window:Dialog({
+                Title = "Warning",
+                Content = "Are you sure you want to load this script?",
+                Buttons = {
+                    {
+                        Title = "Confirm",
+                        Callback = function()
+                            loadstring(game:HttpGet("https://raw.githubusercontent.com/Youifpg/ArbixHubV1/refs/heads/main/Source.lua"))()
+                            Fluent:Notify({
+                                Title = "Kyaa Hub",
+                                Content = "Loading Arbix Hub...",
+                                Duration = 8
+                            })
+                        end
+                    },
+                    {
+                        Title = "Cancel",
+                        Callback = function()
+                            print("Cancelled")
+                        end
+                    }
+                }
+            })
+        end
+    })
+
+    Tabs.TheMimic:AddButton({
+        Title = "Rael Hub?",
+        Description = "",
+        Callback = function()
+            Window:Dialog({
+                Title = "Warning",
+                Content = "Are you sure you want to load this script?",
+                Buttons = {
+                    {
+                        Title = "Confirm",
+                        Callback = function()
+                            loadstring(game:HttpGet"https://raw.githubusercontent.com/Laelmano24/Rael-Hub/main/main.txt")()
+                            Fluent:Notify({
+                                Title = "Kyaa Hub",
+                                Content = "Loading Rael Hub...",
+                                Duration = 8
+                            })
+                        end
+                    },
+                    {
+                        Title = "Cancel",
+                        Callback = function()
+                            print("Cancelled")
+                        end
+                    }
+                }
+            })
+        end
+    })
+
+    Tabs.Evade:AddButton({
+        Title = "Tora Hub",
+        Description = "No key",
+        Callback = function()
+            Window:Dialog({
+                Title = "Warning",
+                Content = "Are you sure you want to load this script?",
+                Buttons = {
+                    {
+                        Title = "Confirm",
+                        Callback = function()
+                            loadstring(game:HttpGet("https://raw.githubusercontent.com/ToraScript/Script/main/Evade"))()
+                            Fluent:Notify({
+                                Title = "Kyaa Hub",
+                                Content = "Loading Tora Hub...",
+                                Duration = 8
+                            })
+                        end
+                    },
+                    {
+                        Title = "Cancel",
+                        Callback = function()
+                            print("Cancelled")
+                        end
+                    }
+                }
+            })
+        end
+    })
+
+    Tabs.Evade:AddButton({
+        Title = "Unknown Hub",
+        Description = "No key",
+        Callback = function()
+            Window:Dialog({
+                Title = "Warning",
+                Content = "Are you sure you want to load this script?",
+                Buttons = {
+                    {
+                        Title = "Confirm",
+                        Callback = function()
+                            loadstring(game:HttpGet('https://raw.githubusercontent.com/Unknownproooolucky/Unknown-Hub-X-Universal-Games/main/Games/Evade'))()
+                            Fluent:Notify({
+                                Title = "Kyaa Hub",
+                                Content = "Loading Unknown Hub...",
+                                Duration = 8
+                            })
+                        end
+                    },
+                    {
+                        Title = "Cancel",
+                        Callback = function()
+                            print("Cancelled")
+                        end
+                    }
+                }
+            })
+        end
+    })  
+
+    Tabs.SquidGameX:AddButton({
+        Title = "Unknown Hub",
+        Description = "",
+        Callback = function()
+            Window:Dialog({
+                Title = "Warning",
+                Content = "Are you sure you want to load this script?",
+                Buttons = {
+                    {
+                        Title = "Confirm",
+                        Callback = function()
+                            loadstring(game:HttpGet("https://pastebin.com/raw/T9vegSYx", true))()
+                            Fluent:Notify({
+                                Title = "Kyaa Hub",
+                                Content = "Loading Unknown Hub...",
+                                Duration = 8
+                            })
+                        end
+                    },
+                    {
+                        Title = "Cancel",
+                        Callback = function()
+                            print("Cancelled")
+                        end
+                    }
+                }
+            })
+        end
+    })
+
+    Tabs.NaturalDisasterSurvival:AddButton({
+        Title = "Unknown Hub",
+        Description = "Script Troll Fly 🤣",
+        Callback = function()
+            Window:Dialog({
+                Title = "Warning",
+                Content = "Are you sure you want to load this script?",
+                Buttons = {
+                    {
+                        Title = "Confirm",
+                        Callback = function()
+                            loadstring(game:HttpGet(('https://raw.githubusercontent.com/0Ben1/fe/main/obf_rf6iQURzu1fqrytcnLBAvW34C9N55kS9g9G3CKz086rC47M6632sEd4ZZYB0AYgV.lua.txt'),true))()
+                            Fluent:Notify({
+                                Title = "Kyaa Hub",
+                                Content = "Loading Unknown Hub...",
                                 Duration = 8
                             })
                         end
@@ -309,7 +560,7 @@ SaveManager:BuildConfigSection(Tabs.Settings)
 Window:SelectTab(1)
 
 Fluent:Notify({
-    Title = "Fluent",
+    Title = "Kyaa Hub",
     Content = "The script has been loaded.",
     Duration = 8
 })
