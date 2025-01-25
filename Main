@@ -381,6 +381,96 @@ do
         end
     })
 
+    Tabs.BlueLockRivals:AddButton({
+        Title = "NS Hub",
+        Description = "No key? IDK",
+        Callback = function()
+            Window:Dialog({
+                Title = "Warning",
+                Content = "Are you sure you want to load this script?",
+                Buttons = {
+                    {
+                        Title = "Confirm",
+                        Callback = function()
+                            loadstring(game:HttpGet("https://raw.githubusercontent.com/OhhMyGehlee/fo/refs/heads/main/ot"))()
+                            Fluent:Notify({
+                                Title = "Kyaa Hub",
+                                Content = "Loading NS Hub...",
+                                Duration = 8
+                            })
+                        end
+                    },
+                    {
+                        Title = "Cancel",
+                        Callback = function()
+                            print("Cancelled")
+                        end
+                    }
+                }
+            })
+        end
+    })
+
+    Tabs.BlueLockRivals:AddButton({
+        Title = "Cruz (DRAG HERE)",
+        Description = "No key? IDK",
+        Callback = function()
+            Window:Dialog({
+                Title = "Warning",
+                Content = "Are you sure you want to load this script?",
+                Buttons = {
+                    {
+                        Title = "Confirm",
+                        Callback = function()
+                            loadstring(game:HttpGet("https://raw.githubusercontent.com/Yopapa7/Yopapa7/refs/heads/main/Uweueuue",true))()
+                            Fluent:Notify({
+                                Title = "Kyaa Hub",
+                                Content = "Loading Cruz (DRAG HERE)...",
+                                Duration = 8
+                            })
+                        end
+                    },
+                    {
+                        Title = "Cancel",
+                        Callback = function()
+                            print("Cancelled")
+                        end
+                    }
+                }
+            })
+        end
+    })
+
+    Tabs.Doors:AddButton({
+        Title = "Rael Hub?",
+        Description = "",
+        Callback = function()
+            Window:Dialog({
+                Title = "Warning",
+                Content = "Are you sure you want to load this script?",
+                Buttons = {
+                    {
+                        Title = "Confirm",
+                        Callback = function()
+                            loadstring(game:HttpGet"https://raw.githubusercontent.com/Laelmano24/Rael-Hub/main/main.txt")()
+                            Fluent:Notify({
+                                Title = "Kyaa Hub",
+                                Content = "Loading Rael Hub...",
+                                Duration = 8
+                            })
+                        end
+                    },
+                    {
+                        Title = "Cancel",
+                        Callback = function()
+                            print("Cancelled")
+                        end
+                    }
+                }
+            })
+        end
+    })
+
     Tabs.TheMimic:AddButton({
         Title = "Rael Hub?",
         Description = "",
