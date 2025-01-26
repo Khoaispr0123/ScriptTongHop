@@ -83,6 +83,7 @@ do
                     {
                         Title = "Confirm",
                         Callback = function()
+                            wait(1)
                             loadstring(game:HttpGet("https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source"))()
                             Fluent:Notify({
                                 Title = "Script Tổng Hợp",
@@ -102,11 +103,6 @@ do
         end
     })
     
-    Tabs.Doors:AddParagraph({
-        Title = "Warning",
-        Content = "⛔️ This game is currently not supported. ⛔️"
-    })
-    
     Tabs.BloxFruits:AddButton({
         Title = "W-Azure",
         Description = "No Key",
@@ -118,6 +114,7 @@ do
                     {
                         Title = "Confirm",
                         Callback = function()
+                            wait(1)
                             loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/3b2169cf53bc6104dabe8e19562e5cc2.lua"))()
                             Fluent:Notify({
                                 Title = "Kyaa Hub",
@@ -148,6 +145,7 @@ do
                     {
                         Title = "Confirm",
                         Callback = function()
+                            wait(1)
                             loadstring(game:HttpGet("https://raw.githubusercontent.com/DarkMuscles/Games/Roblox/Bloxfruits/MinHubV4.lua"))()
                             Fluent:Notify({
                                 Title = "Kyaa Hub",
@@ -178,6 +176,7 @@ do
                     {
                         Title = "Confirm",
                         Callback = function()
+                            wait(1)
                             loadstring(game:HttpGet("https://raw.githubusercontent.com/realredz/BloxFruits/refs/heads/main/Source.lua"))()
                             Fluent:Notify({
                                 Title = "Kyaa Hub",
@@ -208,6 +207,7 @@ do
                     {
                         Title = "Confirm",
                         Callback = function()
+                            wait(1)
                             loadstring(game:HttpGet("https://raw.githubusercontent.com/AhmadV99/Speed-Hub-X/main/Speed%20Hub%20X.lua", true))()
                             Fluent:Notify({
                                 Title = "Kyaa Hub",
@@ -238,6 +238,7 @@ do
                     {
                         Title = "Confirm",
                         Callback = function()
+                            wait(1)
                             loadstring(game:HttpGet('https://raw.githubusercontent.com/diemquy/CutTayHub/main/Cuttayhubreal.lua'))()
                             Fluent:Notify({
                                 Title = "Kyaa Hub",
@@ -268,6 +269,7 @@ do
                     {
                         Title = "Confirm",
                         Callback = function()
+                            wait(1)
                             getgenv().Team = "Marines"
 
                             getgenv().Hide_Menu = false
@@ -302,6 +304,7 @@ do
                     {
                         Title = "Confirm",
                         Callback = function()
+                            wait(1)
                             loadstring(game:HttpGet("https://scripts.alchemyhub.xyz"))()
                             Fluent:Notify({
                                 Title = "Kyaa Hub",
@@ -332,6 +335,7 @@ do
                     {
                         Title = "Confirm",
                         Callback = function()
+                            wait(1)
                             loadstring(game:HttpGet('https://raw.githubusercontent.com/onepicesenpai/onepicesenpai/main/onichanokaka'))()
                             Fluent:Notify({
                                 Title = "Kyaa Hub",
@@ -362,6 +366,7 @@ do
                     {
                         Title = "Confirm",
                         Callback = function()
+                            wait(1)
                             loadstring(game:HttpGet("https://raw.githubusercontent.com/Youifpg/ArbixHubV1/refs/heads/main/Source.lua"))()
                             Fluent:Notify({
                                 Title = "Kyaa Hub",
@@ -392,6 +397,7 @@ do
                     {
                         Title = "Confirm",
                         Callback = function()
+                            wait(1)
                             loadstring(game:HttpGet("https://raw.githubusercontent.com/OhhMyGehlee/fo/refs/heads/main/ot"))()
                             Fluent:Notify({
                                 Title = "Kyaa Hub",
@@ -422,6 +428,7 @@ do
                     {
                         Title = "Confirm",
                         Callback = function()
+                            wait(1)
                             loadstring(game:HttpGet("https://raw.githubusercontent.com/Yopapa7/Yopapa7/refs/heads/main/Uweueuue",true))()
                             Fluent:Notify({
                                 Title = "Kyaa Hub",
@@ -452,6 +459,7 @@ do
                     {
                         Title = "Confirm",
                         Callback = function()
+                            wait(1)
                             loadstring(game:HttpGet"https://raw.githubusercontent.com/Laelmano24/Rael-Hub/main/main.txt")()
                             Fluent:Notify({
                                 Title = "Kyaa Hub",
@@ -482,6 +490,7 @@ do
                     {
                         Title = "Confirm",
                         Callback = function()
+                            wait(1)
                             loadstring(game:HttpGet"https://raw.githubusercontent.com/Laelmano24/Rael-Hub/main/main.txt")()
                             Fluent:Notify({
                                 Title = "Kyaa Hub",
@@ -512,6 +521,7 @@ do
                     {
                         Title = "Confirm",
                         Callback = function()
+                            wait(1)
                             loadstring(game:HttpGet("https://raw.githubusercontent.com/ToraScript/Script/main/Evade"))()
                             Fluent:Notify({
                                 Title = "Kyaa Hub",
@@ -542,6 +552,7 @@ do
                     {
                         Title = "Confirm",
                         Callback = function()
+                            wait(1)
                             loadstring(game:HttpGet('https://raw.githubusercontent.com/Unknownproooolucky/Unknown-Hub-X-Universal-Games/main/Games/Evade'))()
                             Fluent:Notify({
                                 Title = "Kyaa Hub",
@@ -572,6 +583,7 @@ do
                     {
                         Title = "Confirm",
                         Callback = function()
+                            wait(1)
                             loadstring(game:HttpGet("https://pastebin.com/raw/T9vegSYx", true))()
                             Fluent:Notify({
                                 Title = "Kyaa Hub",
@@ -602,6 +614,7 @@ do
                     {
                         Title = "Confirm",
                         Callback = function()
+                            wait(1)
                             loadstring(game:HttpGet(('https://raw.githubusercontent.com/0Ben1/fe/main/obf_rf6iQURzu1fqrytcnLBAvW34C9N55kS9g9G3CKz086rC47M6632sEd4ZZYB0AYgV.lua.txt'),true))()
                             Fluent:Notify({
                                 Title = "Kyaa Hub",
