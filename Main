@@ -1,5 +1,5 @@
 repeat task.wait(0.25) until game:IsLoaded();
-getgenv().Image = "rbxassetid://8104472021824927"; -- put a asset id in here to make it work
+getgenv().Image = "rbxassetid://117981122322975"; -- put a asset id in here to make it work
 getgenv().ToggleUI = "LeftControl" -- This where you can Toggle the Fluent ui library
 
 task.spawn(function()
@@ -18,7 +18,7 @@ task.spawn(function()
         ImageButton.Image = getgenv().Image;
         ImageButton.Draggable = true;
         ImageButton.Transparency = 1;
-        UICorner.CornerRadius = UDim.new(0,200);
+        UICorner.CornerRadius = UDim.new(0,8);
         UICorner.Parent = ImageButton;
         ImageButton.MouseButton1Click:Connect(function()
             game:GetService("VirtualInputManager"):SendKeyEvent(true,getgenv().ToggleUI,false,game);
@@ -353,7 +353,7 @@ do
 
     Tabs.BlueLockRivals:AddButton({
         Title = "Arbix Hub",
-        Description = "No key? IDK",
+        Description = "No key",
         Callback = function()
             Window:Dialog({
                 Title = "Warning",
@@ -383,7 +383,7 @@ do
 
     Tabs.BlueLockRivals:AddButton({
         Title = "NS Hub",
-        Description = "No key? IDK",
+        Description = "Need Key",
         Callback = function()
             Window:Dialog({
                 Title = "Warning",
